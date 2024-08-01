@@ -1,0 +1,22 @@
+<div class="table-container">
+  <table class="centered-table">
+    <thead>
+      <tr>
+        @for(header of getTableHeaderNames() ;track header){
+        <th>{{ header }}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for(item of getInvestmentData(); track item.id){
+      <tr>
+        <td>{{ item.year }}</td>
+        <td>{{ item.investmentvalue }}</td>
+        <td>{{ item.intrest }}</td>
+        <td>{{ item.totalIntrest }}</td>
+        <td>{{ item.investedCapital }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

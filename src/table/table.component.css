@@ -1,0 +1,20 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.centered-table {
+  border-collapse: collapse; /* Optional: For a cleaner table appearance */
+  width: 50%; /* Adjust width as needed */
+  /* Optional: Center the table horizontally */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-table th,
+.centered-table td {
+  border: 0px solid #ddd; /* Example border style */
+  padding: 5px; /* Example padding */
+  text-align: right; /* Example text alignment */
+}

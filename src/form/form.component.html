@@ -1,0 +1,49 @@
+@if(response){
+<h1>{{ response.toString() }}</h1>
+}
+
+<app-card class="align-card">
+  <form>
+    <p>
+      <label for="investment">INTIAL INVESTMENT</label>
+      <input
+        type="number"
+        id="investment"
+        name="investment"
+        min="1000"
+        [(ngModel)]="investment"
+      />
+    </p>
+
+    <p>
+      <label for="annualInvestment">ANNUAL INVSTMENT</label>
+      <input
+        type="number"
+        id="annualInvestment"
+        name="annualInvestment"
+        required
+        [(ngModel)]="annualInvestment"
+      />
+    </p>
+
+    <p>
+      <label for="return">Expected Return</label>
+      <input type="number" id="return" name="return" [(ngModel)]="return" />
+    </p>
+
+    <p>
+      <label for="duration">DURATION</label>
+      <input
+        type="number"
+        id="duration"
+        name="durations"
+        [(ngModel)]="duration"
+      />
+    </p>
+
+    <p class="actions">
+      <!-- <button type="button" (click)="handleCancelAddingTask()">Cancel</button> -->
+      <button (click)="addData()" type="submit">Calculate</button>
+    </p>
+  </form>
+</app-card>
